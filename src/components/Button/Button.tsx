@@ -17,14 +17,14 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
     <TouchableOpacity onPress={onPress}>
       <View
         style={tailwind(
-          `px-4 py-2 mt-2 rounded-sm  ${
+          `px-4 py-4 mt-2 rounded-md ${
             type === "primary" ? "bg-primary" : "bg-white border border-primary"
           }`
         )}
       >
         <Text
           style={[
-            tailwind("text-center"),
+            tailwind("text-center uppercase"),
             tailwind(type === "primary" ? "text-white" : "text-primary"),
           ]}
         >
