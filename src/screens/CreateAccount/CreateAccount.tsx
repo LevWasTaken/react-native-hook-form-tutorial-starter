@@ -14,6 +14,10 @@ export const CreateAccount: React.FunctionComponent<CreateAccountProps> =
     };
 
     const [firstName, setFirstName] = React.useState("");
+    const [lastName, setLastName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [pwd, setPwd] = React.useState("");
+    const [confirmPwd, setConfirmPwd] = React.useState("");
 
     return (
       <ScrollView
@@ -21,7 +25,7 @@ export const CreateAccount: React.FunctionComponent<CreateAccountProps> =
         contentContainerStyle={tailwind(" p-4 ")}
       >
         <Text style={tailwind("font-bold text-xl mt-2")}>
-          Création de compte
+          Création de compteuh
         </Text>
         <InputGroup
           label="Préom"
@@ -31,27 +35,27 @@ export const CreateAccount: React.FunctionComponent<CreateAccountProps> =
         />
         <InputGroup
           label="Nom"
-          value={firstName}
+          value={lastName}
           placeholder="Berry"
-          onChangeText={setFirstName}
+          onChangeText={setLastName}
         />
         <InputGroup
           label="Email"
-          value={firstName}
+          value={email}
           placeholder="marie.berry@mail.com"
-          onChangeText={setFirstName}
+          onChangeText={setEmail}
           type="email-address"
         />
         <InputGroup
           label="Mot de passe"
-          value={firstName}
-          onChangeText={setFirstName}
+          value={pwd}
+          onChangeText={setPwd}
           password
         />
         <InputGroup
           label="Confirmation de mot de passe"
-          value={firstName}
-          onChangeText={setFirstName}
+          value={confirmPwd}
+          onChangeText={setConfirmPwd}
           password
         />
         <View style={tailwind("flex-grow")} />
